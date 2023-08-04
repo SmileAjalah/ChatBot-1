@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registeration</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<style>
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+  height: 648px;
+  background:
+				linear-gradient(
+				  rgba(13, 110, 255, 0.7),
+				  rgba(201, 189, 206, 0.8)
+				),
+			    url("../static/WL.jpg");
+			background-size: 100%;
+</style>
+<body>
+<div class="container">
+	<h2 style="color: white">User Registration</h2>
+	<form action="{{ url_for('register') }}" method="post">
+        {% if mesage is defined and mesage %}
+			<div class="alert alert-warning">{{ mesage }}</div>
+		{% endif %}
+		<div class="form-group">
+			<label for="name" style="color: white">Name:</label>
+			<input type="text" class="form-control" id="name" name="name" placeholder="Enter name" name="name">
+		</div>
+		<div class="form-group">
+			<label for="email" style="color: white">Email:</label>
+			<input type="email" class="form-control" id="email" name="email" placeholder="Enter email" name="email">
+		</div>
+		<div class="form-group">
+			<label for="password" style="color: white">Password:</label>
+			<input type="password" class="form-control" id="password" name="password" placeholder="Enter password" name="pswd">
+		</div>
+		<button type="submit" class="btn btn-primary">Register</button>
+		<p class="bottom" style="color: white">Already have an account?  <a class="bottom" href="{{url_for('login')}}" style="color: white"><h1>Login here</h1></a></p>
+	</form>
+</div>
+</body>
+</html>

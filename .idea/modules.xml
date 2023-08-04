@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/pythonProject11.iml" filepath="$PROJECT_DIR$/.idea/pythonProject11.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/Andikari Chat Bot.iml" filepath="$PROJECT_DIR$/.idea/Andikari Chat Bot.iml" />
+>>>>>>> 7fc97b6 (Create A Database)
     </modules>
   </component>
 </project>
