@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Homechat</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+  height: 648px;
+  background:
+				linear-gradient(
+				  rgba(13, 110, 255, 0.7),
+				  rgba(201, 189, 206, 0.8)
+				),
+			    url("../static/WB.jpg");
+			background-size: 100%;
+}
+.overlay {
+			width: 100%; height: 850px;
+			}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 10px;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1 style="color: white;text-align: center">Chat</h1>
+
+<div class="container">
+  <img src="{{url_for('static', filename='Len.jpeg')}}" alt="Avatar" class="right" style="width:100%;">
+  <p>Hello my name Is <strong>Len</strong>, <a href="{{ url_for('FLen') }}">Come And Chat With Me!</a></p>
+  <span class="time-right">{{ date }}</span>
+</div>
+<h1>     </h1>
+<h1>     </h1>
+<h1>     </h1>
+<div class="container">
+  <img src="{{url_for('static', filename='Satoshi.jpeg')}}" alt="Avatar" class="right" style="width:100%;">
+  <p>Hi my name is <strong>Satoshi</strong>, <a href="{{ url_for('FLen') }}">Come And Chat With Me!</a></p>
+  <span class="time-right">{{ date }}</span>
+</div>
+
+<h1 style="background-color: #53e0de;color: white;text-align: center"> In Development! </h1>
+
+</body>
+</html>
